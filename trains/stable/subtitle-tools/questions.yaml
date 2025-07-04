@@ -1,0 +1,16 @@
+questions:
+  - variable: image.repository
+    label: Image Repository
+    type: string
+    default: registry.vyzon.ai/subtitle-tools
+
+  - variable: image.tag
+    label: Image Tag
+    type: string
+    default: latest
+
+  - variable: persistence.hostPath
+    label: Host Path to Mount
+    type: string
+    default: /mnt/Pool/Media
+

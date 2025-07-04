@@ -1,0 +1,12 @@
+{
+  "name": "ixcharts",
+  "description": "My custom app catalog for TrueNAS SCALE",
+  "maintainer": "secretzer0",
+  "location": "https://github.com/secretzer0/ixcharts",
+  "trains": {
+    "stable": {
+      "location": "./trains/stable"
+    }
+  }
+}
+

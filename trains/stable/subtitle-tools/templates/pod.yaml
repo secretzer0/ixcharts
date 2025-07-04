@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "image": {
+      "type": "object",
+      "properties": {
+        "repository": { "type": "string" },
+        "tag": { "type": "string" }
+      },
+      "required": ["repository", "tag"]
+    },
+    "persistence": {
+      "type": "object",
+      "properties": {
+        "hostPath": { "type": "string" },
+        "mountPath": { "type": "string" }
+      },
+      "required": ["hostPath", "mountPath"]
+    }
+  }
+}
+

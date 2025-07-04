@@ -1,0 +1,8 @@
+image:
+  repository: registry.vyzon.ai/subtitle-tools
+  tag: latest
+
+persistence:
+  hostPath: /mnt/Pool0/Media
+  mountPath: /mnt/media
+
