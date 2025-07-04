@@ -45,14 +45,5 @@
             ],
             "icon_url": "https://media.sys.truenas.net/apps/transcoder/icons/icon.svg"
         }
-    },
-    "test": {},
-    "maintainers": {
-        "truenas": {
-            "name": "truenas",
-            "url": "https://www.truenas.com/",
-            "email": "dev@ixsystems.com"
-        }
-    },
-    "last_update": "2025-07-04 08:26:26"
+    }
 }
