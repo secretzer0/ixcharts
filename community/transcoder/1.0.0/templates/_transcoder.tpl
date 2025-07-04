@@ -44,42 +44,6 @@ service:
 
 {{/* Persistence */}}
 persistence:
-  config:
-    enabled: true
-    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.transcoderStorage.config) | nindent 4 }}
-    targetSelector:
-      transcoder:
-        transcoder:
-          mountPath: /config
-        {{- if and (eq .Values.transcoderStorage.config.type "ixVolume")
-                  (not (.Values.transcoderStorage.config.ixVolumeConfig | default dict).aclEnable) }}
-        01-permissions:
-          mountPath: /mnt/directories/config
-        {{- end }}
-  cache:
-    enabled: true
-    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.transcoderStorage.cache) | nindent 4 }}
-    targetSelector:
-      transcoder:
-        transcoder:
-          mountPath: /cache
-        {{- if and (eq .Values.transcoderStorage.cache.type "ixVolume")
-                  (not (.Values.transcoderStorage.cache.ixVolumeConfig | default dict).aclEnable) }}
-        01-permissions:
-          mountPath: /mnt/directories/cache
-        {{- end }}
-  transcode:
-    enabled: true
-    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.transcoderStorage.transcodes) | nindent 4 }}
-    targetSelector:
-      transcoder:
-        transcoder:
-          mountPath: /config/transcodes
-        {{- if and (eq .Values.transcoderStorage.transcodes.type "ixVolume")
-                  (not (.Values.transcoderStorage.transcodes.ixVolumeConfig | default dict).aclEnable) }}
-        01-permissions:
-          mountPath: /mnt/directories/transcodes
-        {{- end }}
   tmp:
     enabled: true
     type: emptyDir

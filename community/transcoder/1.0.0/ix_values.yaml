@@ -16,16 +16,4 @@ transcoderRunAs:
   group: 568
 
 transcoderStorage:
-  config:
-    type: ixVolume
-    ixVolumeConfig:
-      datasetName: config
-  cache:
-    type: ixVolume
-    ixVolumeConfig:
-      datasetName: cache
-  transcodes:
-    type: ixVolume
-    ixVolumeConfig:
-      datasetName: transcodes
   additionalStorages: []
