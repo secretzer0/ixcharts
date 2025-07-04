@@ -1,11 +1,15 @@
-icon_url: https://raw.githubusercontent.com/secretzer0/ixcharts/main/community/transcoder/icon.png
+icon_url: https://media.sys.truenas.net/apps/transcoder/icons/icon.svg
 categories:
   - media
   - tools
-screenshots: []
+screenshots:
+  - https://media.sys.truenas.net/apps/transcoder/screenshots/screenshot1.png
+  - https://media.sys.truenas.net/apps/transcoder/screenshots/screenshot2.png
 tags:
-  - transcoding
   - ffmpeg
-  - subtitle
-  - ocr
-  - media-processing
+  - mkvtoolnix
+  - ocrmypdf
+  - tesseract
+  - subtitle-edit
+  - transcoding
+  - conversion

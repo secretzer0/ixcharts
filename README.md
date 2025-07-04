@@ -1,83 +1,49 @@
-# Private Catalog for TrueNAS SCALE 23.10
+# Private TrueNAS SCALE Catalog - Transcoder
 
-This is a TrueNAS SCALE catalog repository containing custom applications.
+This is a private TrueNAS SCALE catalog containing custom applications.
 
 ## Available Applications
 
 ### Transcoder
-A comprehensive media transcoding and subtitle processing toolkit that includes:
+A container with FFmpeg, MKVToolNix, OCRmyPDF, Tesseract, and Subtitle Edit for media processing tasks.
+
+**Features:**
 - FFmpeg for video/audio transcoding
 - MKVToolNix for Matroska file manipulation
-- OCRmyPDF and Tesseract for OCR processing
-- Subtitle Edit for subtitle editing
+- OCRmyPDF for adding OCR text layers to PDFs
+- Tesseract OCR engine
+- Subtitle Edit for subtitle manipulation
+- Persistent storage support for configuration and media files
 
 ## Installation
-
-### 1. Build and Push Docker Image
-
-First, build and push your Docker image to a registry accessible by TrueNAS:
-
-```bash
-cd /home/tmelhiser/transcoder
-docker build -t your-registry/transcoder:latest .
-docker push your-registry/transcoder:latest
-```
-
-### 2. Add the Catalog to TrueNAS
 
 1. In TrueNAS SCALE, navigate to **Apps** → **Manage Catalogs**
 2. Click **Add Catalog**
 3. Enter the following details:
-   - **Name**: `secretzer0` (or your preferred name)
+   - **Catalog Name**: `Private Catalog` (or your preferred name)
    - **Repository**: `https://github.com/secretzer0/ixcharts`
-   - **Branch**: `main`
    - **Preferred Trains**: `community`
+   - **Branch**: `main` (or `master` depending on your default branch)
 4. Click **Save**
-
-### 3. Deploy the Application
-
-1. Navigate to **Apps** → **Available Applications**
-2. Find **Transcoder** in the list
-3. Click **Install**
-4. Configure the following:
-   - **Image Repository**: Update to your Docker registry path (e.g., `your-registry/transcoder`)
-   - **User/Group ID**: Set appropriate permissions
-   - **Storage**: Configure media path and any additional storage
-   - **Resources**: Adjust CPU/Memory limits as needed
-5. Click **Save** to deploy
 
 ## Usage
 
-Once deployed, you can access the container to run various media processing commands:
+After adding the catalog:
+1. Go to **Apps** → **Available Applications**
+2. Find **Transcoder** in the list
+3. Click **Install**
+4. Configure storage paths as needed
+5. Deploy the application
 
-```bash
-# Access the container
-kubectl exec -it deployment/transcoder-transcoder -- bash
+## Docker Image
 
-# Example commands:
-ffmpeg -i input.mp4 -c:v libx264 output.mp4  # Video transcoding
-mkvmerge -o output.mkv input.mp4 subtitles.srt  # Merge video with subtitles
-ocrmypdf input.pdf output.pdf  # Add OCR layer to PDF
-mono /opt/subedit/SubtitleEdit.exe  # Run Subtitle Edit
-```
+The transcoder application uses a custom Docker image hosted at `registry.vyzon.ai/transcoder:1.0.0`.
 
-## Directory Structure
+## Requirements
 
-```
-ixcharts/
-├── catalog.json
-├── README.md
-└── community/
-    └── transcoder/
-        ├── item.yaml
-        ├── app_versions.json
-        └── 1.0.0/
-            ├── Chart.yaml
-            ├── app-readme.md
-            ├── ix_values.yaml
-            ├── metadata.yaml
-            ├── questions.yaml
-            └── templates/
-                ├── common.yaml
-                └── _transcoder.tpl
-```
+- TrueNAS SCALE 23.10 or later
+- Access to the private Docker registry (`registry.vyzon.ai`)
+
+## Support
+
+This is a private catalog. For issues or questions, please contact the repository maintainer.

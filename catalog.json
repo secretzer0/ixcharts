@@ -1,44 +1,58 @@
 {
+    "charts": {},
     "community": {
         "transcoder": {
-            "app_readme": "# Transcoder\\n\\nA comprehensive media transcoding and subtitle processing toolkit for TrueNAS SCALE.\\n\\n## Features\\n\\n- **FFmpeg**: Complete video and audio transcoding capabilities\\n- **MKVToolNix**: Advanced Matroska (MKV) file manipulation\\n- **OCRmyPDF & Tesseract**: Optical Character Recognition for PDFs and images\\n- **Subtitle Edit**: Powerful subtitle editing and conversion (Mono version)\\n\\n> When the application is installed, the container runs with the configured user permissions (Default: `1000`).\\n> All mounted storage(s) will be accessible with the configured user/group permissions.",
+            "app_readme": "<h1>Transcoder</h1>\n<p>Transcoder is a container with FFmpeg, MKVToolNix, OCRmyPDF, Tesseract, and Subtitle Edit for media processing.</p>\n<blockquote>\n<p>When application is installed, a container will be launched with <strong>root</strong> privileges.\nThis is required in order to apply the correct permissions to the <code>Transcoder</code> directories.\nAfterward, the <code>Transcoder</code> container will run as a <strong>non</strong>-root user (Default: <code>568</code>).\nAll mounted storage(s) will be <code>chown</code>ed only if the parent directory does not match the configured user.</p>\n</blockquote>",
             "categories": [
                 "media",
                 "tools"
             ],
-            "description": "A comprehensive media transcoding and subtitle processing toolkit",
+            "description": "Transcoder is a container with FFmpeg, MKVToolNix, OCRmyPDF, Tesseract, and Subtitle Edit for media processing.",
             "healthy": true,
             "healthy_error": null,
             "home": "https://github.com/secretzer0/ixcharts",
-            "location": "community/transcoder",
-            "latest_version": "1.0.0",
+            "location": "/__w/charts/charts/community/transcoder",
+            "latest_version": "1.3.12",
             "latest_app_version": "1.0.0",
-            "latest_human_version": "1.0.0_1.0.0",
-            "last_update": "2025-07-04 13:58:39",
+            "latest_human_version": "1.0.0_1.3.12",
+            "last_update": "2025-03-06 08:26:26",
             "name": "transcoder",
             "recommended": false,
             "title": "Transcoder",
             "maintainers": [
                 {
-                    "name": "secretzer0",
-                    "url": "https://github.com/secretzer0",
-                    "email": "noreply@example.com"
+                    "name": "truenas",
+                    "url": "https://www.truenas.com/",
+                    "email": "dev@ixsystems.com"
                 }
             ],
             "tags": [
-                "transcoding",
                 "ffmpeg",
-                "subtitle",
-                "ocr",
-                "media-processing"
+                "mkvtoolnix", 
+                "ocrmypdf",
+                "tesseract",
+                "subtitle-edit",
+                "transcoding",
+                "conversion"
             ],
-            "screenshots": [],
+            "screenshots": [
+                "https://media.sys.truenas.net/apps/transcoder/screenshots/screenshot1.png",
+                "https://media.sys.truenas.net/apps/transcoder/screenshots/screenshot2.png"
+            ],
             "sources": [
                 "https://github.com/secretzer0/ixcharts",
-                "https://ffmpeg.org/",
-                "https://mkvtoolnix.download/"
+                "https://github.com/secretzer0/ixcharts/tree/master/community/transcoder"
             ],
-            "icon_url": "https://raw.githubusercontent.com/secretzer0/ixcharts/main/community/transcoder/icon.png"
+            "icon_url": "https://media.sys.truenas.net/apps/transcoder/icons/icon.svg"
         }
-    }
+    },
+    "test": {},
+    "maintainers": [
+        {
+            "name": "truenas",
+            "url": "https://www.truenas.com/",
+            "email": "dev@ixsystems.com"
+        }
+    ],
+    "last_update": "2025-03-06 08:26:26"
 }

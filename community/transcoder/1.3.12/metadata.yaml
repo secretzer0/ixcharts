@@ -1,0 +1,8 @@
+runAsContext:
+  - userName: transcoder
+    groupName: transcoder
+    gid: 568
+    uid: 568
+    description: Transcoder runs as any non-root user.
+capabilities: []
+hostMounts: []

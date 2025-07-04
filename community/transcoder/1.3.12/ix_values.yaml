@@ -1,0 +1,33 @@
+image:
+  repository: registry.vyzon.ai/transcoder
+  pullPolicy: IfNotPresent
+  tag: 1.0.0
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+transcoderConfig:
+  additionalEnvs: []
+
+transcoderGPU: {}
+
+transcoderRunAs:
+  user: 568
+  group: 568
+
+transcoderStorage:
+  config:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: config
+  cache:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: cache
+  transcodes:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: transcodes
+  additionalStorages: []
