@@ -1,3 +1,3 @@
-# Subtitle Tools App
+# Private Catalog for TrueScale 23.10
 
-This is a TrueNAS SCALE app to manually process MKV files and convert incompatible subtitles to SubRip format using ffmpeg and mkvtoolnix.
+This is a TrueNAS SCALE Repo with apps like: subtitle-converter
