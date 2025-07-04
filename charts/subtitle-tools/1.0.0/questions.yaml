@@ -1,0 +1,11 @@
+groups:
+  - name: General
+    label: General Settings
+    description: Configure the subtitle processing container
+    questions:
+      - variable: timezone
+        label: Timezone
+        description: Container timezone
+        schema:
+          type: string
+          default: America/Chicago

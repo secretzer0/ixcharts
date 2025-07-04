@@ -1,9 +1,0 @@
-apiVersion: v2
-name: subtitle-tools
-version: 0.1.0
-appVersion: "1.0"
-description: Subtitle processing tools for TrueNAS SCALE
-maintainers:
-  - name: secretzer0
-icon: https://raw.githubusercontent.com/truecharts/catalog/main/icon.png
-

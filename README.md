@@ -1,4 +1,3 @@
-# ixcharts
+# Subtitle Tools App
 
-Custom TrueNAS SCALE 23.10 app catalog with charts like subtitle-tools.
-
+This is a TrueNAS SCALE app to manually process MKV files and convert incompatible subtitles to SubRip format using ffmpeg and mkvtoolnix.

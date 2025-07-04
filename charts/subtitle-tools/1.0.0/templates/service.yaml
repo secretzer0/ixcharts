@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: subtitle-tools
+spec:
+  selector:
+    app.kubernetes.io/name: subtitle-tools
+  ports:
+    - port: 80
+      targetPort: 80
