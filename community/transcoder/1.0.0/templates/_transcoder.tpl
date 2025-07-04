@@ -101,14 +101,4 @@ persistence:
         {{- end }}
   {{- end }}
 
-{{ with .Values.transcoderGPU }}
-scaleGPU:
-  {{ range $key, $value := . }}
-  - gpu:
-      {{ $key }}: {{ $value }}
-    targetSelector:
-      transcoder:
-        - transcoder
-  {{ end }}
-{{ end }}
 {{- end -}}

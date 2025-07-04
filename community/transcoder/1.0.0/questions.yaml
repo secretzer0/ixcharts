@@ -529,12 +529,3 @@ questions:
                     - Exponent - eg. 134e6
                   default: "8Gi"
                   required: true
-
-  - variable: transcoderGPU
-    group: Resources Configuration
-    label: GPU Configuration
-    schema:
-      type: dict
-      $ref:
-        - "definitions/gpuConfiguration"
-      attrs: []

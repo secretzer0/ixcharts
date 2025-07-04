@@ -11,8 +11,6 @@ resources:
 transcoderConfig:
   additionalEnvs: []
 
-transcoderGPU: {}
-
 transcoderRunAs:
   user: 568
   group: 568
