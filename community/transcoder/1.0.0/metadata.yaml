@@ -1,0 +1,10 @@
+runAsContext:
+  - userName: "transcoder"
+    groupName: "transcoder"
+    gid: 1000
+    uid: 1000
+    description: "Transcoder runs as a configurable non-root user."
+
+capabilities: []
+
+hostMounts: []

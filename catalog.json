@@ -1,0 +1,42 @@
+{
+    "community": {
+        "transcoder": {
+            "app_readme": "<h1>Transcoder</h1>\n<p>A comprehensive media transcoding and subtitle processing toolkit for TrueNAS SCALE.</p>\n<h2>Features</h2>\n<ul>\n<li><strong>FFmpeg</strong>: Complete video and audio transcoding capabilities</li>\n<li><strong>MKVToolNix</strong>: Advanced Matroska (MKV) file manipulation</li>\n<li><strong>OCRmyPDF &amp; Tesseract</strong>: Optical Character Recognition for PDFs and images</li>\n<li><strong>Subtitle Edit</strong>: Powerful subtitle editing and conversion (Mono version)</li>\n</ul>",
+            "categories": [
+                "media",
+                "tools"
+            ],
+            "description": "A comprehensive media transcoding and subtitle processing toolkit",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://github.com/secretzer0/ixcharts",
+            "location": "/home/tmelhiser/transcoder/ixcharts/community/transcoder",
+            "latest_version": "1.0.0",
+            "latest_app_version": "1.0.0",
+            "latest_human_version": "1.0.0_1.0.0",
+            "name": "transcoder",
+            "recommended": false,
+            "title": "Transcoder",
+            "maintainers": [
+                {
+                    "name": "secretzer0",
+                    "url": "https://github.com/secretzer0"
+                }
+            ],
+            "tags": [
+                "transcoding",
+                "ffmpeg",
+                "subtitle",
+                "ocr",
+                "media-processing"
+            ],
+            "screenshots": [],
+            "sources": [
+                "https://github.com/secretzer0/ixcharts",
+                "https://ffmpeg.org/",
+                "https://mkvtoolnix.download/"
+            ],
+            "icon_url": "https://raw.githubusercontent.com/secretzer0/ixcharts/main/community/transcoder/icon.png"
+        }
+    }
+}

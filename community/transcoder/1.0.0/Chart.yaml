@@ -1,0 +1,23 @@
+name: transcoder
+description: A comprehensive media transcoding and subtitle processing toolkit
+annotations:
+  title: Transcoder
+type: application
+version: 1.0.0
+apiVersion: v2
+appVersion: 1.0.0
+kubeVersion: '>=1.16.0-0'
+maintainers:
+  - name: secretzer0
+    url: https://github.com/secretzer0
+home: https://github.com/secretzer0/ixcharts
+icon: https://raw.githubusercontent.com/secretzer0/ixcharts/main/community/transcoder/icon.png
+sources:
+  - https://github.com/secretzer0/ixcharts
+  - https://ffmpeg.org/
+  - https://mkvtoolnix.download/
+keywords:
+  - transcoding
+  - media
+  - ffmpeg
+  - subtitle
