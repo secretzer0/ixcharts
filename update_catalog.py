@@ -88,7 +88,8 @@ def generate_catalog():
                     "maintainers": [
                         {
                             "name": "secretzer0",
-                            "url": "https://github.com/secretzer0"
+                            "url": "https://github.com/secretzer0",
+                            "email": "noreply@example.com"
                         }
                     ],
                     "tags": ["transcoding", "ffmpeg", "subtitle", "ocr", "media-processing"],

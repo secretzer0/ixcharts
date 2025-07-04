@@ -21,7 +21,8 @@
             "maintainers": [
                 {
                     "name": "secretzer0",
-                    "url": "https://github.com/secretzer0"
+                    "url": "https://github.com/secretzer0",
+                    "email": "noreply@example.com"
                 }
             ],
             "tags": [
