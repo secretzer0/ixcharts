@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+import json
+import sys
+
+def migrate_values(values):
+    """
+    Migration script for Transcoder 1.0.0
+    
+    This is the initial release, so no migrations are needed.
+    Simply return the values unchanged.
+    """
+    return values
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        sys.stderr.write("Usage: migrate <values_json>\n")
+        sys.exit(1)
+    
+    try:
+        values = json.loads(sys.argv[1])
+        migrated_values = migrate_values(values)
+        print(json.dumps(migrated_values))
+    except json.JSONDecodeError as e:
+        sys.stderr.write(f"Invalid JSON input: {e}\n")
+        sys.exit(1)
+    except Exception as e:
+        sys.stderr.write(f"Migration failed: {e}\n")
+        sys.exit(1)

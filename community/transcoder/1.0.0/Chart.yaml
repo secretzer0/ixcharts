@@ -4,7 +4,7 @@ description: Transcoder is a container with FFmpeg, MKVToolNix, OCRmyPDF, Tesser
 annotations:
   title: Transcoder
 type: application
-version: 1.3.12
+version: 1.0.0
 apiVersion: v2
 appVersion: 1.0.0
 kubeVersion: '>=1.16.0-0'
