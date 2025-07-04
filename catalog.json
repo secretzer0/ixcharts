@@ -1,11 +1,33 @@
 {
-  "name": "ixcharts",
-  "description": "My custom app catalog for TrueNAS SCALE",
-  "maintainer": "secretzer0",
-  "location": "https://github.com/secretzer0/ixcharts",
-  "trains": {
-    "stable": {
-      "location": "./trains/stable"
+  "charts": {
+    "subtitle-tools": {
+      "app_readme": "<h1>Subtitle Tools</h1><p>FFmpeg + SubtitleEdit container to convert non-SubRip subtitle streams into .srt and re-mux the file without re-encoding.</p>",
+      "categories": ["media", "tools"],
+      "description": "Convert and remux incompatible subtitles to SubRip (.srt)",
+      "healthy": true,
+      "healthy_error": null,
+      "home": "https://github.com/secretzer0/ixcharts",
+      "location": "./trains/stable/subtitle-tools",
+      "latest_version": "0.1.0",
+      "latest_app_version": "1.0",
+      "latest_human_version": "1.0_0.1.0",
+      "last_update": "2025-04-06 00:00:00",
+      "name": "subtitle-tools",
+      "recommended": false,
+      "title": "Subtitle Tools",
+      "maintainers": [
+        {
+          "name": "secretzer0",
+          "url": "https://github.com/secretzer0",
+          "email": "your@email.com"
+        }
+      ],
+      "tags": ["subtitle", "ffmpeg", "media"],
+      "screenshots": [],
+      "sources": [
+        "https://github.com/secretzer0/ixcharts"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/truecharts/catalog/main/icon.png"
     }
   }
 }
