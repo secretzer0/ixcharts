@@ -1,7 +1,7 @@
 {
     "community": {
         "transcoder": {
-            "app_readme": "<h1>Transcoder</h1>\n<p>A comprehensive media transcoding and subtitle processing toolkit for TrueNAS SCALE.</p>\n<h2>Features</h2>\n<ul>\n<li><strong>FFmpeg</strong>: Complete video and audio transcoding capabilities</li>\n<li><strong>MKVToolNix</strong>: Advanced Matroska (MKV) file manipulation</li>\n<li><strong>OCRmyPDF &amp; Tesseract</strong>: Optical Character Recognition for PDFs and images</li>\n<li><strong>Subtitle Edit</strong>: Powerful subtitle editing and conversion (Mono version)</li>\n</ul>",
+            "app_readme": "# Transcoder\\n\\nA comprehensive media transcoding and subtitle processing toolkit for TrueNAS SCALE.\\n\\n## Features\\n\\n- **FFmpeg**: Complete video and audio transcoding capabilities\\n- **MKVToolNix**: Advanced Matroska (MKV) file manipulation\\n- **OCRmyPDF & Tesseract**: Optical Character Recognition for PDFs and images\\n- **Subtitle Edit**: Powerful subtitle editing and conversion (Mono version)\\n\\n> When the application is installed, the container runs with the configured user permissions (Default: `1000`).\\n> All mounted storage(s) will be accessible with the configured user/group permissions.",
             "categories": [
                 "media",
                 "tools"
@@ -14,7 +14,7 @@
             "latest_version": "1.0.0",
             "latest_app_version": "1.0.0",
             "latest_human_version": "1.0.0_1.0.0",
-            "last_update": "2025-01-04 00:00:00",
+            "last_update": "2025-07-04 13:58:39",
             "name": "transcoder",
             "recommended": false,
             "title": "Transcoder",
