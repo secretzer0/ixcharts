@@ -1,0 +1,17 @@
+1. Transcoder has been deployed successfully!
+
+2. To access the container, run:
+   kubectl exec -it deployment/{{ include "transcoder.fullname" . }} -- bash
+
+3. Available tools:
+   - ffmpeg: Video/audio transcoding
+   - mkvmerge, mkvextract: MKV file operations
+   - ocrmypdf: PDF OCR processing
+   - mono /opt/subedit/SubtitleEdit.exe: Subtitle editing
+
+4. Storage paths:
+   - Config: /config
+   - Media: /mnt/media
+   {{- range $idx, $storage := .Values.transcoderStorage.additionalStorages }}
+   - Additional {{ $idx }}: {{ $storage.mountPath }}
+   {{- end }}

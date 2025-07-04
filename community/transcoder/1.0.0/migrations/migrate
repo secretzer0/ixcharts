@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+import json
+import os
+import sys
+
+
+def migrate(values):
+    """
+    Migrate old values format to new format if needed.
+    This is called during app upgrades.
+    """
+    # For now, just return values as-is since this is version 1.0.0
+    return values
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        exit(1)
+
+    if os.path.exists(sys.argv[1]):
+        with open(sys.argv[1], "r") as f:
+            print(json.dumps(migrate(json.loads(f.read()))))

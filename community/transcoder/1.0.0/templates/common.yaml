@@ -1,5 +1,0 @@
-{{/* Make sure all variables are properly defined before merging anything */}}
-{{- $_ := set . "Values" (deepCopy .Values) -}}
-
-{{/* Merge the local values and the common chart */}}
-{{- $_ := mustMergeOverwrite .Values (include "transcoder.workload" $ | fromYaml) -}}

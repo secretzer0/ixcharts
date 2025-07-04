@@ -1,0 +1,46 @@
+# Default values for transcoder.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: transcoder
+  pullPolicy: IfNotPresent
+  tag: latest
+
+# Timezone
+TZ: "America/Los_Angeles"
+
+# Transcoder configuration
+transcoderConfig:
+  additionalEnvs: []
+
+# Run as user/group
+transcoderRunAs:
+  user: 1000
+  group: 1000
+
+# Storage configuration
+transcoderStorage:
+  config:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: config
+  media:
+    type: hostPath
+    hostPathConfig:
+      hostPath: "/mnt/media"
+  additionalStorages: []
+
+# Resource limits
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+# Service configuration (not used but required by some TrueNAS versions)
+service:
+  type: ClusterIP
+  port: 9999
+
+nameOverride: ""
+fullnameOverride: ""

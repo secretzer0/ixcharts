@@ -1,0 +1,56 @@
+{{- if eq .Values.transcoderStorage.config.type "ixVolume" }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "transcoder.fullname" . }}-config
+  labels:
+    {{- include "transcoder.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  {{- with .Values.transcoderStorage.config.ixVolumeConfig.storageClass }}
+  storageClassName: {{ . }}
+  {{- end }}
+{{- end }}
+{{- if eq .Values.transcoderStorage.media.type "ixVolume" }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "transcoder.fullname" . }}-media
+  labels:
+    {{- include "transcoder.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  {{- with .Values.transcoderStorage.media.ixVolumeConfig.storageClass }}
+  storageClassName: {{ . }}
+  {{- end }}
+{{- end }}
+{{- range $idx, $storage := .Values.transcoderStorage.additionalStorages }}
+{{- if eq $storage.type "ixVolume" }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "transcoder.fullname" $ }}-{{ $storage.ixVolumeConfig.datasetName }}
+  labels:
+    {{- include "transcoder.labels" $ | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ $storage.ixVolumeConfig.size | default "1Gi" }}
+  {{- with $storage.ixVolumeConfig.storageClass }}
+  storageClassName: {{ . }}
+  {{- end }}
+{{- end }}
+{{- end }}
