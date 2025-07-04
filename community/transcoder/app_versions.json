@@ -3,7 +3,7 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/ixcharts/ixcharts/community/transcoder/1.0.0",
+        "location": "community/transcoder/1.0.0",
         "last_update": "2025-01-04 00:00:00",
         "required_features": [
             "definitions/timezone",
